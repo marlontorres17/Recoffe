@@ -1,0 +1,247 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Marlon\\source\\repos\\security\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCF4B6C-BFDA-4E4A-A327-C05EB447BCC1}|Data\\Data.csproj|c:\\users\\marlon\\source\\repos\\security\\data\\implements\\drole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCF4B6C-BFDA-4E4A-A327-C05EB447BCC1}|Data\\Data.csproj|solutionrelative:data\\implements\\drole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B2AD9F5-7506-46A8-8C5C-496A69011708}|Diagram\\Diagram.csproj|c:\\users\\marlon\\source\\repos\\security\\diagram\\recoffe.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{1B2AD9F5-7506-46A8-8C5C-496A69011708}|Diagram\\Diagram.csproj|solutionrelative:diagram\\recoffe.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\role_viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\role_viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|c:\\users\\marlon\\source\\repos\\security\\web\\web.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{035F7F43-C0F8-4110-8768-F7437C4B4CDC}|Web\\Web.csproj|solutionrelative:web\\web.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F5C6033-EC91-45A1-8D27-67BB95677C6E}|Entity\\Entity.csproj|c:\\users\\marlon\\source\\repos\\security\\entity\\dto\\dataselectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F5C6033-EC91-45A1-8D27-67BB95677C6E}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\dataselectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|c:\\users\\marlon\\source\\repos\\security\\bussines\\implements\\actionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|solutionrelative:bussines\\implements\\actionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|c:\\users\\marlon\\source\\repos\\security\\bussines\\implements\\brole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|solutionrelative:bussines\\implements\\brole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|c:\\users\\marlon\\source\\repos\\security\\bussines\\interface\\ibrole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01CB0961-B34F-47EB-9CAB-01F7DEDC07AE}|Bussines\\Bussines.csproj|solutionrelative:bussines\\interface\\ibrole_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DRole_View.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Data\\Implements\\DRole_View.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\DRole_View.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Data\\Implements\\DRole_View.cs",
+              "RelativeToolTip": "Data\\Implements\\DRole_View.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T22:55:08.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "recoffe.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Diagram\\recoffe.edmx",
+              "RelativeDocumentMoniker": "Diagram\\recoffe.edmx",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Diagram\\recoffe.edmx [Diagram1]*",
+              "RelativeToolTip": "Diagram\\recoffe.edmx [Diagram1]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-08-03T22:43:27.681Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\RoleController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\RoleController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\RoleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T20:03:48.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\PersonController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\PersonController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\PersonController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\PersonController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T19:31:37.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Role_ViewController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\Role_ViewController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\Role_ViewController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\Role_ViewController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\Role_ViewController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T18:50:06.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\UserController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\UserController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\UserController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T20:04:08.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\ViewController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\ViewController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\ViewController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\ViewController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T20:04:19.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModuleController.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\ModuleController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\ModuleController.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Controllers\\Implements\\ModuleController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\ModuleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T19:58:27.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Program.cs",
+              "RelativeDocumentMoniker": "Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Program.cs",
+              "RelativeToolTip": "Web\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T19:13:24.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Web.http",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Web.http",
+              "RelativeDocumentMoniker": "Web\\Web.http",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Web\\Web.http",
+              "RelativeToolTip": "Web\\Web.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-03T21:14:54.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataSelectDto.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Entity\\DTO\\DataSelectDto.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\DataSelectDto.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Entity\\DTO\\DataSelectDto.cs",
+              "RelativeToolTip": "Entity\\DTO\\DataSelectDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T20:00:33.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ActionResult.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Implements\\ActionResult.cs",
+              "RelativeDocumentMoniker": "Bussines\\Implements\\ActionResult.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Implements\\ActionResult.cs",
+              "RelativeToolTip": "Bussines\\Implements\\ActionResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T19:56:58.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IBRole_View.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Interface\\IBRole_View.cs",
+              "RelativeDocumentMoniker": "Bussines\\Interface\\IBRole_View.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Interface\\IBRole_View.cs",
+              "RelativeToolTip": "Bussines\\Interface\\IBRole_View.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T18:51:17.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BRole_View.cs",
+              "DocumentMoniker": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Implements\\BRole_View.cs",
+              "RelativeDocumentMoniker": "Bussines\\Implements\\BRole_View.cs",
+              "ToolTip": "C:\\Users\\Marlon\\source\\repos\\security\\Bussines\\Implements\\BRole_View.cs",
+              "RelativeToolTip": "Bussines\\Implements\\BRole_View.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwDYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T18:49:33.762Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

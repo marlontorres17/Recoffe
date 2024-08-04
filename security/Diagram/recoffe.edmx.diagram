@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a4ddd36f38624a90b77ba3279ddddce5" Name="Diagram1" ZoomLevel="42">
+        <EntityTypeShape EntityType="recoffeModel.admin" Width="1.5" PointX="6.125" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.admin_finca" Width="1.5" PointX="9.125" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.carrito" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.carrito_producto" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.country" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.departament" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.finca" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.module" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.persona" Width="1.5" PointX="0.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.producto" Width="1.5" PointX="9.125" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.recoleccion" Width="1.5" PointX="0.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.recolector" Width="1.5" PointX="2.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.recolectores_finca" Width="1.5" PointX="6.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.role" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.servicio" Width="1.5" PointX="4.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.servicio_recolector" Width="1.5" PointX="7.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.usuario" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.venta" Width="1.5" PointX="7.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="recoffeModel.viewv" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="recoffeModel.FK__admin__persona_i__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__admin_fin__admin__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__recolecci__admin__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__admin_fin__finca__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__carrito__usuario__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__carrito_p__carri__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__carrito_p__produ__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__departame__count__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__finca__propietar__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__producto__finca___571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__recolecto__finca__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__servicio__finca___5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__recolecto__perso__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__usuario__persona__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__venta__comprador__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__venta__producto___59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__recolecci__recol__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__recolecto__recol__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__servicio___recol__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="recoffeModel.FK__servicio___servi__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="recoffeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="codigo" Type="varchar" MaxLength="50" />
+          <Property Name="persona_id" Type="int" />
+        </EntityType>
+        <EntityType Name="admin_finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="admin_id" Type="int" />
+          <Property Name="finca_id" Type="int" />
+        </EntityType>
+        <EntityType Name="carrito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="usuario_id" Type="int" />
+          <Property Name="fecha" Type="date" />
+        </EntityType>
+        <EntityType Name="carrito_producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="carrito_id" Type="int" />
+          <Property Name="producto_id" Type="int" />
+          <Property Name="cantidad" Type="int" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="departament">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="codigo" Type="varchar" MaxLength="50" />
+          <Property Name="country_id" Type="int" />
+        </EntityType>
+        <EntityType Name="finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="255" />
+          <Property Name="propietario_id" Type="int" />
+          <Property Name="tamano" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="text" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="apellido" Type="varchar" MaxLength="100" />
+          <Property Name="identificacion" Type="varchar" MaxLength="50" />
+          <Property Name="contacto" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="descripcion" Type="text" />
+          <Property Name="precio" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="finca_id" Type="int" />
+          <Property Name="categoria_id" Type="int" />
+        </EntityType>
+        <EntityType Name="recoleccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="recolector_id" Type="int" />
+          <Property Name="admin_id" Type="int" />
+          <Property Name="dia" Type="date" />
+          <Property Name="kilos" Type="varchar" MaxLength="50" />
+          <Property Name="precio_por_kilo" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="salario_calculado" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="recolector">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="codigo" Type="varchar" MaxLength="50" />
+          <Property Name="persona_id" Type="int" />
+        </EntityType>
+        <EntityType Name="recolectores_finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="recolector_id" Type="int" />
+          <Property Name="finca_id" Type="int" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="servicio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="finca_id" Type="int" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="descripcion" Type="text" />
+          <Property Name="precio" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="servicio_recolector">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="servicio_id" Type="int" />
+          <Property Name="recolector_id" Type="int" />
+          <Property Name="fecha" Type="date" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="persona_id" Type="int" />
+          <Property Name="contrasena" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="venta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="producto_id" Type="int" />
+          <Property Name="comprador_id" Type="int" />
+          <Property Name="fecha" Type="date" />
+          <Property Name="cantidad" Type="int" />
+          <Property Name="total" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="viewv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__admin__persona_i__4222D4EF">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="admin" Type="Self.admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__admin_fin__admin__48CFD27E">
+          <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+          <End Role="admin_finca" Type="Self.admin_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin_finca">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__admin_fin__finca__49C3F6B7">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="admin_finca" Type="Self.admin_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin_finca">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito__usuario__5DCAEF64">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="carrito" Type="Self.carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito">
+              <PropertyRef Name="usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito_p__carri__60A75C0F">
+          <End Role="carrito" Type="Self.carrito" Multiplicity="0..1" />
+          <End Role="carrito_producto" Type="Self.carrito_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito_producto">
+              <PropertyRef Name="carrito_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito_p__produ__619B8048">
+          <End Role="producto" Type="Self.producto" Multiplicity="0..1" />
+          <End Role="carrito_producto" Type="Self.carrito_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="producto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito_producto">
+              <PropertyRef Name="producto_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__departame__count__66603565">
+          <End Role="country" Type="Self.country" Multiplicity="0..1" />
+          <End Role="departament" Type="Self.departament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="country">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="departament">
+              <PropertyRef Name="country_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__finca__propietar__3C69FB99">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="finca" Type="Self.finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="finca">
+              <PropertyRef Name="propietario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__producto__finca___571DF1D5">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="producto" Type="Self.producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="producto">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecci__admin__4D94879B">
+          <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+          <End Role="recoleccion" Type="Self.recoleccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recoleccion">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecci__recol__4CA06362">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="recoleccion" Type="Self.recoleccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recoleccion">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__finca__45F365D3">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="recolectores_finca" Type="Self.recolectores_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolectores_finca">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__perso__3F466844">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="recolector" Type="Self.recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolector">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__recol__44FF419A">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="recolectores_finca" Type="Self.recolectores_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolectores_finca">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio___recol__5441852A">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="servicio_recolector" Type="Self.servicio_recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio_recolector">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio___servi__534D60F1">
+          <End Role="servicio" Type="Self.servicio" Multiplicity="0..1" />
+          <End Role="servicio_recolector" Type="Self.servicio_recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="servicio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio_recolector">
+              <PropertyRef Name="servicio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio__finca___5070F446">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="servicio" Type="Self.servicio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__persona__398D8EEE">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__venta__comprador__5AEE82B9">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="comprador_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__venta__producto___59FA5E80">
+          <End Role="producto" Type="Self.producto" Multiplicity="0..1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="producto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="producto_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="recoffeModelStoreContainer">
+          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="admin_finca" EntityType="Self.admin_finca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="carrito" EntityType="Self.carrito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="carrito_producto" EntityType="Self.carrito_producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="departament" EntityType="Self.departament" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="finca" EntityType="Self.finca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="module" EntityType="Self.module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="persona" EntityType="Self.persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="producto" EntityType="Self.producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recoleccion" EntityType="Self.recoleccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recolector" EntityType="Self.recolector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recolectores_finca" EntityType="Self.recolectores_finca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="servicio" EntityType="Self.servicio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="servicio_recolector" EntityType="Self.servicio_recolector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="venta" EntityType="Self.venta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="viewv" EntityType="Self.viewv" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__admin__persona_i__4222D4EF" Association="Self.FK__admin__persona_i__4222D4EF">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="admin" EntitySet="admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK__admin_fin__admin__48CFD27E" Association="Self.FK__admin_fin__admin__48CFD27E">
+            <End Role="admin" EntitySet="admin" />
+            <End Role="admin_finca" EntitySet="admin_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__admin_fin__finca__49C3F6B7" Association="Self.FK__admin_fin__finca__49C3F6B7">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="admin_finca" EntitySet="admin_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito__usuario__5DCAEF64" Association="Self.FK__carrito__usuario__5DCAEF64">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="carrito" EntitySet="carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito_p__carri__60A75C0F" Association="Self.FK__carrito_p__carri__60A75C0F">
+            <End Role="carrito" EntitySet="carrito" />
+            <End Role="carrito_producto" EntitySet="carrito_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito_p__produ__619B8048" Association="Self.FK__carrito_p__produ__619B8048">
+            <End Role="producto" EntitySet="producto" />
+            <End Role="carrito_producto" EntitySet="carrito_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__departame__count__66603565" Association="Self.FK__departame__count__66603565">
+            <End Role="country" EntitySet="country" />
+            <End Role="departament" EntitySet="departament" />
+          </AssociationSet>
+          <AssociationSet Name="FK__finca__propietar__3C69FB99" Association="Self.FK__finca__propietar__3C69FB99">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="finca" EntitySet="finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__producto__finca___571DF1D5" Association="Self.FK__producto__finca___571DF1D5">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="producto" EntitySet="producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecci__admin__4D94879B" Association="Self.FK__recolecci__admin__4D94879B">
+            <End Role="admin" EntitySet="admin" />
+            <End Role="recoleccion" EntitySet="recoleccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecci__recol__4CA06362" Association="Self.FK__recolecci__recol__4CA06362">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="recoleccion" EntitySet="recoleccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__finca__45F365D3" Association="Self.FK__recolecto__finca__45F365D3">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="recolectores_finca" EntitySet="recolectores_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__perso__3F466844" Association="Self.FK__recolecto__perso__3F466844">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="recolector" EntitySet="recolector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__recol__44FF419A" Association="Self.FK__recolecto__recol__44FF419A">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="recolectores_finca" EntitySet="recolectores_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio___recol__5441852A" Association="Self.FK__servicio___recol__5441852A">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="servicio_recolector" EntitySet="servicio_recolector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio___servi__534D60F1" Association="Self.FK__servicio___servi__534D60F1">
+            <End Role="servicio" EntitySet="servicio" />
+            <End Role="servicio_recolector" EntitySet="servicio_recolector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio__finca___5070F446" Association="Self.FK__servicio__finca___5070F446">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="servicio" EntitySet="servicio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__persona__398D8EEE" Association="Self.FK__usuario__persona__398D8EEE">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__venta__comprador__5AEE82B9" Association="Self.FK__venta__comprador__5AEE82B9">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__venta__producto___59FA5E80" Association="Self.FK__venta__producto___59FA5E80">
+            <End Role="producto" EntitySet="producto" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="recoffeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="persona_id" Type="Int32" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__admin__persona_i__4222D4EF" FromRole="admin" ToRole="persona" />
+          <NavigationProperty Name="admin_finca" Relationship="Self.FK__admin_fin__admin__48CFD27E" FromRole="admin" ToRole="admin_finca" />
+          <NavigationProperty Name="recoleccion" Relationship="Self.FK__recolecci__admin__4D94879B" FromRole="admin" ToRole="recoleccion" />
+        </EntityType>
+        <EntityType Name="admin_finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="finca_id" Type="Int32" />
+          <NavigationProperty Name="admin" Relationship="Self.FK__admin_fin__admin__48CFD27E" FromRole="admin_finca" ToRole="admin" />
+          <NavigationProperty Name="finca" Relationship="Self.FK__admin_fin__finca__49C3F6B7" FromRole="admin_finca" ToRole="finca" />
+        </EntityType>
+        <EntityType Name="carrito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="usuario_id" Type="Int32" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__carrito__usuario__5DCAEF64" FromRole="carrito" ToRole="usuario" />
+          <NavigationProperty Name="carrito_producto" Relationship="Self.FK__carrito_p__carri__60A75C0F" FromRole="carrito" ToRole="carrito_producto" />
+        </EntityType>
+        <EntityType Name="carrito_producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="carrito_id" Type="Int32" />
+          <Property Name="producto_id" Type="Int32" />
+          <Property Name="cantidad" Type="Int32" />
+          <NavigationProperty Name="carrito" Relationship="Self.FK__carrito_p__carri__60A75C0F" FromRole="carrito_producto" ToRole="carrito" />
+          <NavigationProperty Name="producto" Relationship="Self.FK__carrito_p__produ__619B8048" FromRole="carrito_producto" ToRole="producto" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="departament" Relationship="Self.FK__departame__count__66603565" FromRole="country" ToRole="departament" />
+        </EntityType>
+        <EntityType Name="departament">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="country_id" Type="Int32" />
+          <NavigationProperty Name="country" Relationship="Self.FK__departame__count__66603565" FromRole="departament" ToRole="country" />
+        </EntityType>
+        <EntityType Name="finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="propietario_id" Type="Int32" />
+          <Property Name="tamano" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="admin_finca" Relationship="Self.FK__admin_fin__finca__49C3F6B7" FromRole="finca" ToRole="admin_finca" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__finca__propietar__3C69FB99" FromRole="finca" ToRole="persona" />
+          <NavigationProperty Name="producto" Relationship="Self.FK__producto__finca___571DF1D5" FromRole="finca" ToRole="producto" />
+          <NavigationProperty Name="recolectores_finca" Relationship="Self.FK__recolecto__finca__45F365D3" FromRole="finca" ToRole="recolectores_finca" />
+          <NavigationProperty Name="servicio" Relationship="Self.FK__servicio__finca___5070F446" FromRole="finca" ToRole="servicio" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="identificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contacto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="admin" Relationship="Self.FK__admin__persona_i__4222D4EF" FromRole="persona" ToRole="admin" />
+          <NavigationProperty Name="finca" Relationship="Self.FK__finca__propietar__3C69FB99" FromRole="persona" ToRole="finca" />
+          <NavigationProperty Name="recolector" Relationship="Self.FK__recolecto__perso__3F466844" FromRole="persona" ToRole="recolector" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__usuario__persona__398D8EEE" FromRole="persona" ToRole="usuario" />
+          <NavigationProperty Name="venta" Relationship="Self.FK__venta__comprador__5AEE82B9" FromRole="persona" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="precio" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="finca_id" Type="Int32" />
+          <Property Name="categoria_id" Type="Int32" />
+          <NavigationProperty Name="carrito_producto" Relationship="Self.FK__carrito_p__produ__619B8048" FromRole="producto" ToRole="carrito_producto" />
+          <NavigationProperty Name="finca" Relationship="Self.FK__producto__finca___571DF1D5" FromRole="producto" ToRole="finca" />
+          <NavigationProperty Name="venta" Relationship="Self.FK__venta__producto___59FA5E80" FromRole="producto" ToRole="venta" />
+        </EntityType>
+        <EntityType Name="recoleccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="recolector_id" Type="Int32" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="dia" Type="DateTime" Precision="0" />
+          <Property Name="kilos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="precio_por_kilo" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="salario_calculado" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="admin" Relationship="Self.FK__recolecci__admin__4D94879B" FromRole="recoleccion" ToRole="admin" />
+          <NavigationProperty Name="recolector" Relationship="Self.FK__recolecci__recol__4CA06362" FromRole="recoleccion" ToRole="recolector" />
+        </EntityType>
+        <EntityType Name="recolector">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="persona_id" Type="Int32" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__recolecto__perso__3F466844" FromRole="recolector" ToRole="persona" />
+          <NavigationProperty Name="recoleccion" Relationship="Self.FK__recolecci__recol__4CA06362" FromRole="recolector" ToRole="recoleccion" />
+          <NavigationProperty Name="recolectores_finca" Relationship="Self.FK__recolecto__recol__44FF419A" FromRole="recolector" ToRole="recolectores_finca" />
+          <NavigationProperty Name="servicio_recolector" Relationship="Self.FK__servicio___recol__5441852A" FromRole="recolector" ToRole="servicio_recolector" />
+        </EntityType>
+        <EntityType Name="recolectores_finca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="recolector_id" Type="Int32" />
+          <Property Name="finca_id" Type="Int32" />
+          <NavigationProperty Name="finca" Relationship="Self.FK__recolecto__finca__45F365D3" FromRole="recolectores_finca" ToRole="finca" />
+          <NavigationProperty Name="recolector" Relationship="Self.FK__recolecto__recol__44FF419A" FromRole="recolectores_finca" ToRole="recolector" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="servicio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="finca_id" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="precio" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="finca" Relationship="Self.FK__servicio__finca___5070F446" FromRole="servicio" ToRole="finca" />
+          <NavigationProperty Name="servicio_recolector" Relationship="Self.FK__servicio___servi__534D60F1" FromRole="servicio" ToRole="servicio_recolector" />
+        </EntityType>
+        <EntityType Name="servicio_recolector">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="servicio_id" Type="Int32" />
+          <Property Name="recolector_id" Type="Int32" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="recolector" Relationship="Self.FK__servicio___recol__5441852A" FromRole="servicio_recolector" ToRole="recolector" />
+          <NavigationProperty Name="servicio" Relationship="Self.FK__servicio___servi__534D60F1" FromRole="servicio_recolector" ToRole="servicio" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="persona_id" Type="Int32" />
+          <Property Name="contrasena" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="carrito" Relationship="Self.FK__carrito__usuario__5DCAEF64" FromRole="usuario" ToRole="carrito" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__usuario__persona__398D8EEE" FromRole="usuario" ToRole="persona" />
+        </EntityType>
+        <EntityType Name="venta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="producto_id" Type="Int32" />
+          <Property Name="comprador_id" Type="Int32" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="cantidad" Type="Int32" />
+          <Property Name="total" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__venta__comprador__5AEE82B9" FromRole="venta" ToRole="persona" />
+          <NavigationProperty Name="producto" Relationship="Self.FK__venta__producto___59FA5E80" FromRole="venta" ToRole="producto" />
+        </EntityType>
+        <EntityType Name="viewv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__admin__persona_i__4222D4EF">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="admin" Type="Self.admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__admin_fin__admin__48CFD27E">
+          <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+          <End Role="admin_finca" Type="Self.admin_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin_finca">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecci__admin__4D94879B">
+          <End Role="admin" Type="Self.admin" Multiplicity="0..1" />
+          <End Role="recoleccion" Type="Self.recoleccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recoleccion">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__admin_fin__finca__49C3F6B7">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="admin_finca" Type="Self.admin_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="admin_finca">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito__usuario__5DCAEF64">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="carrito" Type="Self.carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito">
+              <PropertyRef Name="usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito_p__carri__60A75C0F">
+          <End Role="carrito" Type="Self.carrito" Multiplicity="0..1" />
+          <End Role="carrito_producto" Type="Self.carrito_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carrito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito_producto">
+              <PropertyRef Name="carrito_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__carrito_p__produ__619B8048">
+          <End Role="producto" Type="Self.producto" Multiplicity="0..1" />
+          <End Role="carrito_producto" Type="Self.carrito_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="producto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="carrito_producto">
+              <PropertyRef Name="producto_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__departame__count__66603565">
+          <End Role="country" Type="Self.country" Multiplicity="0..1" />
+          <End Role="departament" Type="Self.departament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="country">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="departament">
+              <PropertyRef Name="country_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__finca__propietar__3C69FB99">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="finca" Type="Self.finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="finca">
+              <PropertyRef Name="propietario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__producto__finca___571DF1D5">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="producto" Type="Self.producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="producto">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__finca__45F365D3">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="recolectores_finca" Type="Self.recolectores_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolectores_finca">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio__finca___5070F446">
+          <End Role="finca" Type="Self.finca" Multiplicity="0..1" />
+          <End Role="servicio" Type="Self.servicio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio">
+              <PropertyRef Name="finca_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__perso__3F466844">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="recolector" Type="Self.recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolector">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__persona__398D8EEE">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="persona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__venta__comprador__5AEE82B9">
+          <End Role="persona" Type="Self.persona" Multiplicity="0..1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="comprador_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__venta__producto___59FA5E80">
+          <End Role="producto" Type="Self.producto" Multiplicity="0..1" />
+          <End Role="venta" Type="Self.venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="producto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="venta">
+              <PropertyRef Name="producto_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecci__recol__4CA06362">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="recoleccion" Type="Self.recoleccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recoleccion">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolecto__recol__44FF419A">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="recolectores_finca" Type="Self.recolectores_finca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="recolectores_finca">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio___recol__5441852A">
+          <End Role="recolector" Type="Self.recolector" Multiplicity="0..1" />
+          <End Role="servicio_recolector" Type="Self.servicio_recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recolector">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio_recolector">
+              <PropertyRef Name="recolector_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__servicio___servi__534D60F1">
+          <End Role="servicio" Type="Self.servicio" Multiplicity="0..1" />
+          <End Role="servicio_recolector" Type="Self.servicio_recolector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="servicio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="servicio_recolector">
+              <PropertyRef Name="servicio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="recoffeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admin" EntityType="Self.admin" />
+          <EntitySet Name="admin_finca" EntityType="Self.admin_finca" />
+          <EntitySet Name="carrito" EntityType="Self.carrito" />
+          <EntitySet Name="carrito_producto" EntityType="Self.carrito_producto" />
+          <EntitySet Name="country" EntityType="Self.country" />
+          <EntitySet Name="departament" EntityType="Self.departament" />
+          <EntitySet Name="finca" EntityType="Self.finca" />
+          <EntitySet Name="module" EntityType="Self.module" />
+          <EntitySet Name="persona" EntityType="Self.persona" />
+          <EntitySet Name="producto" EntityType="Self.producto" />
+          <EntitySet Name="recoleccion" EntityType="Self.recoleccion" />
+          <EntitySet Name="recolector" EntityType="Self.recolector" />
+          <EntitySet Name="recolectores_finca" EntityType="Self.recolectores_finca" />
+          <EntitySet Name="role" EntityType="Self.role" />
+          <EntitySet Name="servicio" EntityType="Self.servicio" />
+          <EntitySet Name="servicio_recolector" EntityType="Self.servicio_recolector" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <EntitySet Name="venta" EntityType="Self.venta" />
+          <EntitySet Name="viewv" EntityType="Self.viewv" />
+          <AssociationSet Name="FK__admin__persona_i__4222D4EF" Association="Self.FK__admin__persona_i__4222D4EF">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="admin" EntitySet="admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK__admin_fin__admin__48CFD27E" Association="Self.FK__admin_fin__admin__48CFD27E">
+            <End Role="admin" EntitySet="admin" />
+            <End Role="admin_finca" EntitySet="admin_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecci__admin__4D94879B" Association="Self.FK__recolecci__admin__4D94879B">
+            <End Role="admin" EntitySet="admin" />
+            <End Role="recoleccion" EntitySet="recoleccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__admin_fin__finca__49C3F6B7" Association="Self.FK__admin_fin__finca__49C3F6B7">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="admin_finca" EntitySet="admin_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito__usuario__5DCAEF64" Association="Self.FK__carrito__usuario__5DCAEF64">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="carrito" EntitySet="carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito_p__carri__60A75C0F" Association="Self.FK__carrito_p__carri__60A75C0F">
+            <End Role="carrito" EntitySet="carrito" />
+            <End Role="carrito_producto" EntitySet="carrito_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__carrito_p__produ__619B8048" Association="Self.FK__carrito_p__produ__619B8048">
+            <End Role="producto" EntitySet="producto" />
+            <End Role="carrito_producto" EntitySet="carrito_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__departame__count__66603565" Association="Self.FK__departame__count__66603565">
+            <End Role="country" EntitySet="country" />
+            <End Role="departament" EntitySet="departament" />
+          </AssociationSet>
+          <AssociationSet Name="FK__finca__propietar__3C69FB99" Association="Self.FK__finca__propietar__3C69FB99">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="finca" EntitySet="finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__producto__finca___571DF1D5" Association="Self.FK__producto__finca___571DF1D5">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="producto" EntitySet="producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__finca__45F365D3" Association="Self.FK__recolecto__finca__45F365D3">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="recolectores_finca" EntitySet="recolectores_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio__finca___5070F446" Association="Self.FK__servicio__finca___5070F446">
+            <End Role="finca" EntitySet="finca" />
+            <End Role="servicio" EntitySet="servicio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__perso__3F466844" Association="Self.FK__recolecto__perso__3F466844">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="recolector" EntitySet="recolector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__persona__398D8EEE" Association="Self.FK__usuario__persona__398D8EEE">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__venta__comprador__5AEE82B9" Association="Self.FK__venta__comprador__5AEE82B9">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__venta__producto___59FA5E80" Association="Self.FK__venta__producto___59FA5E80">
+            <End Role="producto" EntitySet="producto" />
+            <End Role="venta" EntitySet="venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecci__recol__4CA06362" Association="Self.FK__recolecci__recol__4CA06362">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="recoleccion" EntitySet="recoleccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolecto__recol__44FF419A" Association="Self.FK__recolecto__recol__44FF419A">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="recolectores_finca" EntitySet="recolectores_finca" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio___recol__5441852A" Association="Self.FK__servicio___recol__5441852A">
+            <End Role="recolector" EntitySet="recolector" />
+            <End Role="servicio_recolector" EntitySet="servicio_recolector" />
+          </AssociationSet>
+          <AssociationSet Name="FK__servicio___servi__534D60F1" Association="Self.FK__servicio___servi__534D60F1">
+            <End Role="servicio" EntitySet="servicio" />
+            <End Role="servicio_recolector" EntitySet="servicio_recolector" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="recoffeModelStoreContainer" CdmEntityContainer="recoffeEntities">
+          <EntitySetMapping Name="admin">
+            <EntityTypeMapping TypeName="recoffeModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admin_finca">
+            <EntityTypeMapping TypeName="recoffeModel.admin_finca">
+              <MappingFragment StoreEntitySet="admin_finca">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="finca_id" ColumnName="finca_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carrito">
+            <EntityTypeMapping TypeName="recoffeModel.carrito">
+              <MappingFragment StoreEntitySet="carrito">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carrito_producto">
+            <EntityTypeMapping TypeName="recoffeModel.carrito_producto">
+              <MappingFragment StoreEntitySet="carrito_producto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="carrito_id" ColumnName="carrito_id" />
+                <ScalarProperty Name="producto_id" ColumnName="producto_id" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="country">
+            <EntityTypeMapping TypeName="recoffeModel.country">
+              <MappingFragment StoreEntitySet="country">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="departament">
+            <EntityTypeMapping TypeName="recoffeModel.departament">
+              <MappingFragment StoreEntitySet="departament">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="country_id" ColumnName="country_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="finca">
+            <EntityTypeMapping TypeName="recoffeModel.finca">
+              <MappingFragment StoreEntitySet="finca">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="propietario_id" ColumnName="propietario_id" />
+                <ScalarProperty Name="tamano" ColumnName="tamano" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="module">
+            <EntityTypeMapping TypeName="recoffeModel.module">
+              <MappingFragment StoreEntitySet="module">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="persona">
+            <EntityTypeMapping TypeName="recoffeModel.persona">
+              <MappingFragment StoreEntitySet="persona">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="identificacion" ColumnName="identificacion" />
+                <ScalarProperty Name="contacto" ColumnName="contacto" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="producto">
+            <EntityTypeMapping TypeName="recoffeModel.producto">
+              <MappingFragment StoreEntitySet="producto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="finca_id" ColumnName="finca_id" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recoleccion">
+            <EntityTypeMapping TypeName="recoffeModel.recoleccion">
+              <MappingFragment StoreEntitySet="recoleccion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="recolector_id" ColumnName="recolector_id" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="dia" ColumnName="dia" />
+                <ScalarProperty Name="kilos" ColumnName="kilos" />
+                <ScalarProperty Name="precio_por_kilo" ColumnName="precio_por_kilo" />
+                <ScalarProperty Name="salario_calculado" ColumnName="salario_calculado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recolector">
+            <EntityTypeMapping TypeName="recoffeModel.recolector">
+              <MappingFragment StoreEntitySet="recolector">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recolectores_finca">
+            <EntityTypeMapping TypeName="recoffeModel.recolectores_finca">
+              <MappingFragment StoreEntitySet="recolectores_finca">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="recolector_id" ColumnName="recolector_id" />
+                <ScalarProperty Name="finca_id" ColumnName="finca_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="role">
+            <EntityTypeMapping TypeName="recoffeModel.role">
+              <MappingFragment StoreEntitySet="role">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="servicio">
+            <EntityTypeMapping TypeName="recoffeModel.servicio">
+              <MappingFragment StoreEntitySet="servicio">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="finca_id" ColumnName="finca_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="servicio_recolector">
+            <EntityTypeMapping TypeName="recoffeModel.servicio_recolector">
+              <MappingFragment StoreEntitySet="servicio_recolector">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="servicio_id" ColumnName="servicio_id" />
+                <ScalarProperty Name="recolector_id" ColumnName="recolector_id" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="recoffeModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+                <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="venta">
+            <EntityTypeMapping TypeName="recoffeModel.venta">
+              <MappingFragment StoreEntitySet="venta">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="producto_id" ColumnName="producto_id" />
+                <ScalarProperty Name="comprador_id" ColumnName="comprador_id" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="total" ColumnName="total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewv">
+            <EntityTypeMapping TypeName="recoffeModel.viewv">
+              <MappingFragment StoreEntitySet="viewv">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
